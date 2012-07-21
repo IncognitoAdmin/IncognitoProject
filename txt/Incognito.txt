@@ -8,7 +8,7 @@ The Incognito Project
 :toc:
 :icons:
 :website: https://github.com/ehj666/Incognito
-image::images/by-nc.eu.png[]
+
 
 In a world that is becoming increasingly invasive and litigious, the individual needs the tools to defend themselves against intrusions to their privacy while minimizing exposure to liability from governments and other powerful entities. The Incognito Project attempts to address this need and hopefully can help serve to restore the rightful freedoms that have slowly eroded over the years in many nations, and often never existed in many others. While having a political objective, the purpose of this project is far more pragmatic. It is simply to get the tools into the hands of individuals that help preserve their rightful freedoms, and in a form that is easy to use by the average freedom lover.
 
@@ -96,15 +96,29 @@ https://joindiaspora.com/[Diaspora]::
 http://status.net/[Statusnet]::
     StatusNet is the world's leading Open Source social software. Its OnDemand and OnPremise options power collaboration for small teams and global corporations. Not included due to lack of maturity.
 
-Using the Distribution
-----------------------
+Installing the Distribution
+---------------------------
 
-The Incognito distribution may be run as a LiveCD, burned and installed in the traditional manner from a CD, or run / installed to a virtual environment such as VirtualBox.
+Instructions on how to download and install the Incognito distro.
 
-Getting the Distribution
-~~~~~~~~~~~~~~~~~~~~~~~~
+How to get it
+~~~~~~~~~~~~~
 
-Place holder text.
+*Github* +
+  Downloading from Github
+
+*Bittorrent* +
+  Downloading from Bittorrent
+
+*Dropbox* +
+  Downloading from Dropbox
+
+*I2P Snark* +
+  Downloading from I2P Snark.
+
+*Osiris* +
+  Downloading from Osiris
+
 
 Burning a CD
 ~~~~~~~~~~~~
@@ -121,174 +135,241 @@ Running the LiveCD
 
 Place holder text
 
-Installing the Distribution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using the Distribution
+----------------------
 
-Place holder text
+The Incognito distribution may be run as a LiveCD, burned and installed in the traditional manner from a CD, or run / installed to a virtual environment such as VirtualBox.
 
-Developing the Incognito Distribution
--------------------------------------
+Bitcoin
+~~~~~~~
+
+Using Bitcoin
+
+CryptoCat
+~~~~~~~~~
+
+Using CryptoCat.
+
+Firefox
+~~~~~~~
+
+Using Firefox.
+
+Firestarter
+~~~~~~~~~~~
+
+Using firestarter
+
+I2P
+~~~
+
+Using I2P
+
+Keepassx
+~~~~~~~~
+
+Using Keepassx
+
+OpenJDK
+~~~~~~~
+
+Using OpenJDK
+
+Osiris
+~~~~~~
+
+Using Osiris
+
+Pidgin
+~~~~~~
+
+Using Pidgin
+
+Privoxy
+~~~~~~~
+
+Using Privoxy.
+
+Tor
+~~~
+
+Using Tor.
+
+TrueCrypt
+~~~~~~~~~
+
+Using TrueCrypt.
+
+Getting the Distribution
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Place holder text.
+
+Development
+-----------
 
 This section covers how to check out, modify, build and incorporate changes into the Incognito distribution.
 
 Using the Version Control System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Place holder text
+Installing and using Git.
 
 Setting up Asciidoc, DocBooks and A2X
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Place holder text
+Installing and setting up the documentation tool chain.
 
 Building the Distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Below are instructions for building a custom secure Linux distribution containing a minimal OS, security features and applications. The instructions begin with the installation of Linux. If the desired platform is a virtual environment such as VirtualBox or VMWare, these tools must be installed first on the host system. See above for using VirtualBox or another VM for creating the distribution. 
 
-*Download http://www.ubuntu.com/download/server[Ubuntu 12.04 Server]*
-
+*Download http://www.ubuntu.com/download/server[Ubuntu 12.04 Server]* +
 Note: The bittorrent download is generally the fastest way to download.
 
-*Virtual machine settings for VirtualBox*
-Name: SecureVM
-Operating System: Linux
-Version: Ubuntu
-Memory: 512MB (Minimum, use more if available)
-Check "Boot Hard Drive"
-Select "Create new hard drive"
-Storage Type: Dynamic expanding storage
-Location: SecureVM (default)
-Size: 8.00GB
+*Virtual machine settings for VirtualBox* +
+Name: SecureVM +
+Operating System: Linux +
+Version: Ubuntu +
+Memory: 512MB (Minimum, use more if available) +
+Check "Boot Hard Drive" +
+Select "Create new hard drive" +
+Storage Type: Dynamic expanding storage +
+Location: SecureVM (default) +
+Size: 8.00GB +
 
-*Settings*
-Select Settings for the Virtual Machine
-Select Storage
-Add a new attachment
-Add CD/DVD device
-Choose Disk
-Navigate to location of Ubuntu 11.04 Server ISO file
-Start VM
+*Settings* +
+Select Settings for the Virtual Machine +
+Select Storage +
+Add a new attachment +
+Add CD/DVD device +
+Choose Disk +
+Navigate to location of Ubuntu 11.04 Server ISO file +
+Start VM +
 
-*Install minimal Ubuntu 11.04 server*
-Select language
-Select F4 and select "Install a minimal system"
-Select language
-Select Country
-Detect Keyboard (usually no)
-Select country of origin
-Select keyboard layout
-Enter host name (agorist-dev)
-Select time zone
-Select partitioning method: Guided - use entire disk
-Select disk partition: only one partition should exist under a VM
-Write changes to disk: Yes
-Full name for the new user: Agorist
-Username for your account: agorist
-Password: Pick a password
-Re-enter password
-if prompted for "Use weak password" select yes or enter a stronger password
-Encrypt your home directory: No
-Enter proxy information if necessary (usually not necessary on a VM).
-Select "No automatic updates"
-Choose software to install: Do not select any software, just continue
-Install the GRUB boot loader...: Yes
-Installation complete: Select continue
-When rebooting, power off machine
+*Install minimal Ubuntu 11.04 server* +
+Select language +
+Select F4 and select "Install a minimal system" +
+Select language +
+Select Country +
+Detect Keyboard (usually no) +
+Select country of origin +
+Select keyboard layout +
+Enter host name (agorist-dev) +
+Select time zone +
+Select partitioning method: Guided - use entire disk +
+Select disk partition: only one partition should exist under a VM +
+Write changes to disk: Yes +
+Full name for the new user: Agorist +
+Username for your account: agorist +
+Password: Pick a password +
+Re-enter password +
+if prompted for "Use weak password" select yes or enter a stronger password +
+Encrypt your home directory: No +
+Enter proxy information if necessary (usually not necessary on a VM). +
+Select "No automatic updates" +
+Choose software to install: Do not select any software, just continue +
+Install the GRUB boot loader...: Yes +
+Installation complete: Select continue +
+When rebooting, power off machine +
 
-*Install basic packages*
+*Install basic packages* +
 
-Login with user name and password specified at install
-Install packages as follows:
+Login with user name and password specified at install +
+Install packages as follows: +
 
-sudo apt-get update
-sudo apt-get install -y xorg
-sudo apt-get install -y gnome-core --no-install-recommends
-sudo apt-get install -y gdm ubuntu-artwork compiz-gnome firefox
-sudo reboot
+sudo apt-get update +
+sudo apt-get install -y xorg +
+sudo apt-get install -y gnome-core --no-install-recommends +
+sudo apt-get install -y gdm ubuntu-artwork compiz-gnome firefox +
+sudo reboot +
 
-*Resume installation from GUI environment*
+*Resume installation from GUI environment* +
 
-Select the user created at installation (Agorist)
-From the status bar select "Ubuntu Classic (No Effects)"
-Note: this is temporary until all software catches up.
-Enter password
-Select Applications | Accessories | Terminal
+Select the user created at installation (Agorist) +
+From the status bar select "Ubuntu Classic (No Effects)" +
+Note: this is temporary until all software catches up. +
+Enter password +
+Select Applications | Accessories | Terminal +
 
-*Change the root password*
-sudo su
-passwd <Set the password for root to be the same as the local user>
-exit
+*Change the root password* +
+sudo su +
+passwd <Set the password for root to be the same as the local user> +
+exit +
 
-*Install some basic system utilities*
-sudo apt-get install -y synaptic alacarte firestarter xdg-utils
-sudo apt-get install -y update-manager
-sudo apt-get update --fix-missing
-sudo apt-get install -y update-manager
-Not sure why the last two steps are needed, but does not work otherwise.
+*Install some basic system utilities* +
+sudo apt-get install -y synaptic alacarte firestarter xdg-utils +
+sudo apt-get install -y update-manager +
+sudo apt-get update --fix-missing +
+sudo apt-get install -y update-manager +
+Not sure why the last two steps are needed, but does not work otherwise. +
 
-*Install prerequisites for applications*
-sudo apt-get install -y privoxy openjdk-6-jre
+*Install prerequisites for applications* +
+sudo apt-get install -y privoxy openjdk-6-jre +
 
-*Install Tor and Vidalia*
-sudo apt-get install -y tor vidalia
+*Install Tor and Vidalia* +
+sudo apt-get install -y tor vidalia +
 
-*Install I2P*
-sudo apt-add-repository ppa:i2p-maintainers/i2p
-sudo apt-get update
-sudo apt-get install -y i2p
+*Install I2P* +
+sudo apt-add-repository ppa:i2p-maintainers/i2p +
+sudo apt-get update +
+sudo apt-get install -y i2p +
 
-*Install KeePassX*
-sudo apt-get install -y keypassx
+*Install KeePassX* +
+sudo apt-get install -y keypassx +
 
-*Install Bitcoin*
-sudo apt-add-repository ppp:stretch/bitcoin
-sudo apt-get update
-sudo apt-get install bitcoin
+*Install Bitcoin* +
+sudo apt-add-repository ppp:stretch/bitcoin +
+sudo apt-get update +
+sudo apt-get install bitcoin +
 
-*Install Osiris*
-sudo nano /etc/apt/sources.list
-add line:
-deb http://osiris.kodeware.net/repository/debian stable non-free
-sudo apt-get update
-sudo apt-get install -y osiris-sps
+*Install Osiris* +
+sudo nano /etc/apt/sources.list +
+add line: +
+deb http://osiris.kodeware.net/repository/debian stable non-free +
+sudo apt-get update +
+sudo apt-get install -y osiris-sps +
 
-*Install TrueCrypt*
-Download from http://www.truecrypt.org/downloads
-Extract
-Run installer
+*Install TrueCrypt* +
+Download from http://www.truecrypt.org/downloads +
+Extract +
+Run installer +
 
-*Configure Privoxy for Tor and I2P*
-sudo nano /etc/privoxy/config
-Scroll to end of file and add:
+*Configure Privoxy for Tor and I2P* +
+sudo nano /etc/privoxy/config +
+Scroll to end of file and add: +
 
-forward .i2p localhost:4444
-forward-socks4a / localhost:9050 .
+forward .i2p localhost:4444 +
+forward-socks4a / localhost:9050 . +
 
-Note: The two lines must appear exactly in the order listed. 
+Note: The two lines must appear exactly in the order listed. + 
 
-*Save file and run*
-sudo /etc/init.d/privoxy restart
+*Save file and run* +
+sudo /etc/init.d/privoxy restart +
 
-*Add Menu Entries for I2P*
-Create launchers for I2PStart, I2PStop and I2PHome
-Edit I2PStart.desktop, I2PStop.desktop and I2PHome.desktop and add the line:
-Categories=Network
-Run the commands:
-sudo xdg-desktop-menu install --novendor --mode system I2PStart.desktop
-sudo xdg-desktop-menu install --novendor --mode system I2PStop.desktop
-sudo xdg-desktop-menu install --novendor --mode system I2PHome.desktop
+*Add Menu Entries for I2P* +
+Create launchers for I2PStart, I2PStop and I2PHome +
+Edit I2PStart.desktop, I2PStop.desktop and I2PHome.desktop and add the line: +
+Categories=Network +
+Run the commands: +
+sudo xdg-desktop-menu install --novendor --mode system I2PStart.desktop +
+sudo xdg-desktop-menu install --novendor --mode system I2PStop.desktop +
+sudo xdg-desktop-menu install --novendor --mode system I2PHome.desktop +
 
-*Make sure the latest of everything is installed*
-sudo apt-get upgrade
-sudo reboot
+*Make sure the latest of everything is installed* +
+sudo apt-get upgrade +
+sudo reboot +
 
-*Install Remastersys*
-Download from:
-http://sourceforge.net/projects/remastersys/files/
-Select remastersys-ubuntu--karmic-lucid-maverick
-sudo dpkg -i remastersys_2.0.18-1_all.deb
-sudo apt-get install -f
+Remastering the Distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Install Remastersys* +
+Download from: +
+http://sourceforge.net/projects/remastersys/files/ +
+Select remastersys-ubuntu--karmic-lucid-maverick +
+sudo dpkg -i remastersys_2.0.18-1_all.deb +
+sudo apt-get install -f +
 
 
 How to Help
